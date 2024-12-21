@@ -12,6 +12,9 @@ The original dataset was provided as an Excel CSV file containing sales transact
 
 ## Data Model Architecture
 
+![image](https://github.com/user-attachments/assets/54a66e65-240d-4a05-923b-e332c2ddb0b4)
+
+
 ### Fact Table
 The central fact table **Sales** contains the core transaction metrics and foreign keys:
 * Measures: Units, Unit Cost, Unit Price
