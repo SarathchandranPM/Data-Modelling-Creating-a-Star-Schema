@@ -41,7 +41,7 @@ Stores customer information:
 
 #### 3. Dim Geography
 Contains location hierarchies:
-* ZipCode
+* ZipCode (Primary Key)
 * City
 * State
 * Region
