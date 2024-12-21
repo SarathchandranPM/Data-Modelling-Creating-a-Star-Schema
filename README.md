@@ -18,7 +18,7 @@ The original dataset was provided as an Excel CSV file containing sales transact
 ### Fact Table
 The central fact table **Sales** contains the core transaction metrics and foreign keys:
 * Measures: Units, Unit Cost, Unit Price
-* Foreign Keys: ProductID, CustomerID, CampaignID, ManufacturerID
+* Foreign Keys: ProductID, CustomerID, Date
 * Additional Fields: Date, Manufacturer
 
 ### Dimension Tables
