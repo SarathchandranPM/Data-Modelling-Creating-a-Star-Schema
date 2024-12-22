@@ -1,4 +1,4 @@
-# Sales Data Model Project in Power BI
+# Sales Data Model Project in Power BI - Part 1
 
 ## Project Overview
 This project demonstrates the implementation of a dimensional data model (primarily star schema with snowflake elements) in Power BI using a sales dataset. The model transforms a flat CSV file into an optimized dimensional structure, improving data analysis capabilities and reporting performance.
@@ -100,6 +100,96 @@ This project provided valuable insights into:
 * Dimensional modeling best practices
 * Power BI data modeling capabilities
 * The balance between performance and model complexity
+
+# Sales and Budget Data Model Enhancement - Part 2
+
+## Project Overview: 
+This phase of the project extends the existing sales data model by incorporating budget data, demonstrating advanced data modeling techniques to handle many-to-many relationships and complex dimensional hierarchies.
+
+## New Data Structure
+
+### New Fact Table
+**FactBudget** was introduced with the following fields:
+* Value (measure)
+* Date (foreign key)
+* Scenario
+* Original Category and Segment fields (later replaced with CatSeg Key)
+
+## Data Modeling Challenges and Solutions
+
+### Handling Many-to-Many Relationships
+* Identified a potential many-to-many relationship between FactBudget and product dimension tables through Category
+* Implemented a bridge table solution to resolve the many-to-many relationship
+* Created a new dimension table (Dim CatSeg) to establish proper relationships
+
+### Creation of Bridge Dimension
+**Dim CatSeg** was created through the following steps:
+* Extracted Category and Segment combinations from Dim Category
+* Removed duplicates to ensure distinct Category-Segment pairs
+* Created a surrogate key (CatSeg Key) using the index column technique
+* Established as the central dimension for category-related attributes
+
+### Data Transformation Process
+1. **Merge Operations**
+   * Merged Dim CatSeg with FactBudget to incorporate CatSeg Key
+   * Performed similar merge operation with Dim Product
+   * Based merge operations on Category and Segment columns
+
+2. **Data Cleanup**
+   * Removed redundant Category and Segment columns from FactBudget
+   * Cleaned up Dim Product by removing duplicate category information
+   * Maintained data integrity while reducing model complexity
+
+## Model Optimization
+
+### Relationship Management
+* Established proper relationships between:
+   * FactBudget and Dim Date through Date column
+   * FactBudget and Dim CatSeg through CatSeg Key
+   * Dim Product and Dim CatSeg through CatSeg Key
+
+### Performance Considerations
+* Implemented surrogate keys for efficient joins
+* Removed redundant columns to reduce model size
+* Optimized relationship cardinality for better query performance
+
+## Technical Skills Demonstrated
+
+### Advanced Data Modeling
+* Resolution of many-to-many relationships
+* Creation and implementation of bridge tables
+* Surrogate key generation and management
+
+### Data Transformation
+* Complex merge operations
+* Duplicate removal and data deduplication
+* Column management and cleanup
+
+### Dimensional Modeling
+* Bridge dimension design and implementation
+* Proper key management
+* Relationship optimization
+
+### Power BI Features Utilized
+* Merge queries functionality
+* Index column creation
+* Relationship management
+* Data model optimization techniques
+
+## Business Intelligence Best Practices
+* Maintained dimensional modeling standards
+* Implemented proper key management
+* Ensured data integrity across the model
+* Created efficient paths for data analysis
+
+## Results
+The enhanced data model now supports:
+* Integrated analysis of sales and budget data
+* Proper handling of category-segment hierarchies
+* Efficient querying across multiple fact tables
+* Streamlined reporting capabilities
+
+This phase of the project demonstrates advanced data modeling techniques and showcases the ability to handle complex business requirements while maintaining model efficiency and analytical capabilities.
 
 ## Tools Used
 * Power BI Desktop
