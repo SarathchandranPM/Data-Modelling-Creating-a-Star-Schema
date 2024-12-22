@@ -149,12 +149,13 @@ This phase of the project extends the existing sales data model by incorporating
    * Dim Product and Dim CatSeg through CatSeg Key
      
 ## Data Model Architecture
-Final Data Model
+**Final Data Model:**
 ![image](https://github.com/user-attachments/assets/7d8e4451-9fc1-4686-94c8-4de4c2ab08f7)
-Sales table and related dimension tables
-![image](https://github.com/user-attachments/assets/0bb796ec-61b9-4fb6-9718-d37422a3082c)
-FactBudget and related dimension tables 
+**Sales table and related dimension tables:**
 ![image](https://github.com/user-attachments/assets/5a0eb62f-3f1b-4b74-8d38-7d1fdfe4fc07)
+**FactBudget table and related dimension tables:**
+![image](https://github.com/user-attachments/assets/5d8c4a3d-dcc5-43ed-b2c4-995d556be7dd)
+
 
 ### Performance Considerations
 * Implemented surrogate keys for efficient joins
