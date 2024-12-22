@@ -1,7 +1,7 @@
 # Sales Data Model Project in Power BI - Part 1
 
-## Project Overview
-This project demonstrates the implementation of a dimensional data model (primarily star schema with snowflake elements) in Power BI using a sales dataset. The model transforms a flat CSV file into an optimized dimensional structure, improving data analysis capabilities and reporting performance.
+## Overview
+This part of the project demonstrates the implementation of a dimensional data model (primarily star schema with snowflake elements) in Power BI using a sales dataset. The model transforms a flat CSV file into an optimized dimensional structure, improving data analysis capabilities and reporting performance.
 
 ## Data Source
 The original dataset was provided as an Excel CSV file containing sales transactions with the following fields:
@@ -103,7 +103,7 @@ This project provided valuable insights into:
 
 # Sales and Budget Data Model Enhancement - Part 2
 
-## Project Overview: 
+## Overview: 
 This phase of the project extends the existing sales data model by incorporating budget data, demonstrating advanced data modeling techniques to handle many-to-many relationships and complex dimensional hierarchies.
 
 ## New Data Structure
@@ -147,6 +147,9 @@ This phase of the project extends the existing sales data model by incorporating
    * FactBudget and Dim Date through Date column
    * FactBudget and Dim CatSeg through CatSeg Key
    * Dim Product and Dim CatSeg through CatSeg Key
+![image](https://github.com/user-attachments/assets/7d8e4451-9fc1-4686-94c8-4de4c2ab08f7)
+![image](https://github.com/user-attachments/assets/0bb796ec-61b9-4fb6-9718-d37422a3082c)
+![image](https://github.com/user-attachments/assets/5a0eb62f-3f1b-4b74-8d38-7d1fdfe4fc07)
 
 ### Performance Considerations
 * Implemented surrogate keys for efficient joins
